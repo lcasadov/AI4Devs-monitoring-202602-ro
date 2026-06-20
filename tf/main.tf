@@ -9,15 +9,15 @@ terraform {
 
 # Configuración del proveedor de AWS
 provider "aws" {
-  region = "us-east-1" # Cambia a la región donde están tus instancias EC2
+  region = "eu-north-1" # Región donde está la instancia a monitorizar (Estocolmo)
 }
 
 # Configuración del proveedor de Datadog
 provider "datadog" {
   api_key = var.datadog_api_key
   app_key = var.datadog_app_key
-  # Configura la región de Datadog
-  api_url = "https://api.us5.datadoghq.com"
+  # Configura la región de Datadog (cuenta en sitio EU)
+  api_url = "https://api.datadoghq.eu"
 }
 
 # Variables de entorno para las claves de Datadog
